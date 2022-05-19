@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\CountryController;
 
 
-Route::get('/2', function () {
-    return view('welcome');
-});
+Route::resource('country',  CountryController::class)->names('admin.country');
